@@ -1,29 +1,19 @@
 import scala.io.Source
 
 object Project {
-  val src = Source.fromFile("C:\\Users\\ISTUDENT\\Documents\\MobCom\\file.txt");
 
   def main(args: Array[String]) {
 
-    textFile();
-    //print(countWords(src));
+    val src = Source.fromFile("C:\\Users\\Bea Madjus\\Desktop\\test1.txt")
 
-  }
+    for (line <- src .getLines()
+      .flatMap(_.split("\\W+"))
+      .filter(x => x.matches("[A-Za-z]+") )) {
 
-  def textFile(): Unit = {
+     println(line)
 
-    for (line <- src.getLines()) {
-      println(line)
     }
   }
-
-  /*def wordCount(source: Source): Long = {
-    var newlineCount = 0L
-    for (line <- source.getLines) {
-      newlineCount += 1
-    }
-    newlineCount
-  }*/
 
   def countWords(text: String) = {
     val counts = scala.collection.mutable.Map.empty[String, Int].withDefaultValue(0)
