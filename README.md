@@ -1,5 +1,4 @@
-# KyelJohnDavid
-# ScalaProject
+# KyelJohnDavid #ScalaProject
 
 Coleen Bartido
 Bea Madjus
