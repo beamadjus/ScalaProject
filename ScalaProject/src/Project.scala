@@ -4,7 +4,7 @@ object Project {
 
   def main(args: Array[String]) {
 
-    var words = scala.io.Source.fromFile("book.txt","ISO-8859-1")
+    var words = fromFile("book.txt","ISO-8859-1")
 
       .getLines
       .flatMap(_.split("\\W+"))
